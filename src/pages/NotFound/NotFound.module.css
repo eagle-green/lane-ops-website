@@ -1,0 +1,14 @@
+.wrapper {
+  text-align: center;
+  padding-block: var(--space-12);
+}
+
+.body {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+}
+
+.action {
+  margin-top: var(--space-6);
+  display: inline-block;
+}

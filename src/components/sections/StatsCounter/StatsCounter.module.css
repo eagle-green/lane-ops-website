@@ -1,0 +1,32 @@
+.grid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.value {
+  font-family: var(--font-family-heading);
+  font-weight: 900;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.label {
+  margin-top: var(--space-3);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+.note {
+  margin-top: var(--space-1);
+  font-size: 0.875rem;
+  color: var(--color-dark-text-faint);
+}
+
+.footnote {
+  margin-top: var(--space-8);
+  font-family: var(--font-family-mono);
+  font-size: 0.6875rem;
+  color: var(--color-dark-text-mono);
+}

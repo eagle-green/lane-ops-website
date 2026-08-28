@@ -1,0 +1,13 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dispatch board overview placeholder">
+  <rect width="800" height="500" fill="#F7F7F7"/>
+  <rect x="0" y="0" width="800" height="56" fill="#FFFFFF"/>
+  <rect x="24" y="18" width="120" height="20" rx="4" fill="#1A2233" opacity="0.15"/>
+  <rect x="0" y="56" width="800" height="444" fill="#F7F7F7"/>
+  <rect x="24" y="88" width="230" height="360" rx="12" fill="#FFFFFF" stroke="#E2E5EA" stroke-width="1"/>
+  <rect x="272" y="88" width="504" height="170" rx="12" fill="#FFFFFF" stroke="#E2E5EA" stroke-width="1"/>
+  <rect x="272" y="278" width="240" height="170" rx="12" fill="#FFFFFF" stroke="#E2E5EA" stroke-width="1"/>
+  <rect x="536" y="278" width="240" height="170" rx="12" fill="#FFFFFF" stroke="#E2E5EA" stroke-width="1"/>
+  <rect x="24" y="88" width="230" height="8" fill="#FF6A00"/>
+  <rect x="272" y="88" width="504" height="8" fill="#28A745"/>
+  <text x="400" y="480" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#1A2233" text-anchor="middle">Dispatch board overview — placeholder image</text>
+</svg>

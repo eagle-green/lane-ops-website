@@ -1,0 +1,14 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Payroll automation placeholder">
+  <rect width="400" height="300" fill="#0b1119"/>
+  <rect x="0" y="0" width="400" height="34" fill="#131c28"/>
+  <circle cx="20" cy="17" r="4" fill="#ffffff" opacity="0.25"/>
+  <circle cx="34" cy="17" r="4" fill="#ffffff" opacity="0.25"/>
+  <circle cx="48" cy="17" r="4" fill="#ffffff" opacity="0.25"/>
+  <ellipse cx="120" cy="110" rx="60" ry="20" fill="#35c25a" opacity="0.85"/>
+  <ellipse cx="120" cy="150" rx="60" ry="20" fill="#35c25a" opacity="0.6"/>
+  <ellipse cx="120" cy="190" rx="60" ry="20" fill="#35c25a" opacity="0.35"/>
+  <rect x="230" y="90" width="150" height="16" rx="8" fill="#ffffff" opacity="0.14"/>
+  <rect x="230" y="122" width="120" height="16" rx="8" fill="#ffffff" opacity="0.14"/>
+  <rect x="230" y="154" width="150" height="16" rx="8" fill="#ffffff" opacity="0.14"/>
+  <rect x="230" y="186" width="90" height="16" rx="8" fill="#d54000" opacity="0.8"/>
+</svg>

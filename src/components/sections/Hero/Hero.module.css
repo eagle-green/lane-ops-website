@@ -1,0 +1,118 @@
+.section {
+  padding-block: var(--space-10) var(--space-12);
+}
+
+.section::before,
+.section::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.section::before {
+  width: 520px;
+  height: 520px;
+  top: -160px;
+  left: -120px;
+  background: radial-gradient(circle, var(--blob-primary-strong) 0%, transparent 68%);
+}
+
+.section::after {
+  width: 600px;
+  height: 600px;
+  bottom: -220px;
+  right: -140px;
+  background: radial-gradient(circle, var(--blob-secondary-strong) 0%, transparent 68%);
+}
+
+.hero {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.content {
+  max-width: 56ch;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-secondary-on-dark);
+  border: 1px solid rgba(53, 194, 90, 0.35);
+  background-color: rgba(53, 194, 90, 0.08);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  margin-bottom: var(--space-5);
+}
+
+.eyebrowDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-secondary-on-dark);
+}
+
+.subheadline {
+  margin-top: var(--space-4);
+  font-size: var(--font-size-lg);
+  color: var(--color-dark-text-muted);
+}
+
+.supportLine {
+  margin-top: var(--space-3);
+  color: var(--color-dark-text-faint);
+}
+
+.bullets {
+  margin-top: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  color: var(--color-dark-text-muted);
+}
+
+.bulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.bulletIcon {
+  color: var(--color-secondary-on-dark);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.actions {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.visual {
+  order: -1;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+
+  .visual {
+    order: 0;
+  }
+
+  .reverse .visual {
+    order: -1;
+  }
+}

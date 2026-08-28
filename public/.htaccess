@@ -1,0 +1,11 @@
+# Rewrite all non-file requests to index.html so React Router's
+# BrowserRouter can handle client-side routes on GoDaddy shared hosting.
+# See docs/IMPLEMENTATION_PLAN.md §14.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>

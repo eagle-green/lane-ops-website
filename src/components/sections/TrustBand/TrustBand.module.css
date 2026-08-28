@@ -1,0 +1,37 @@
+.wrapper {
+  max-width: 56ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.highlight {
+  color: var(--color-secondary-dark);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.body {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.checklist {
+  margin-top: var(--space-6);
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: left;
+}
+
+.checklistItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.checklistIcon {
+  color: var(--color-secondary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}

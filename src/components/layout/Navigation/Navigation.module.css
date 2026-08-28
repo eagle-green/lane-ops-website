@@ -1,0 +1,35 @@
+.nav {
+  display: none;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.link {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--color-dark-text-muted);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  transition:
+    color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.linkActive {
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+}

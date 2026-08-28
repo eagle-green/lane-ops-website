@@ -1,0 +1,32 @@
+.nav {
+  position: sticky;
+  top: 73px; /* below the site header */
+  z-index: 20;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.list {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-block: var(--space-3);
+}
+
+.tab {
+  flex-shrink: 0;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.tab:hover {
+  background-color: var(--color-bg-muted);
+}
+
+.tabActive {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

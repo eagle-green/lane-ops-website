@@ -1,0 +1,27 @@
+.heading {
+  line-height: var(--line-height-tight);
+  font-weight: 700;
+  /* No color set — inherits from context so it stays readable on both
+     light sections (navy, via body's base color) and dark sections
+     (white, via Section's .dark variant). */
+}
+
+.xl {
+  font-size: var(--font-size-3xl);
+}
+
+.lg {
+  font-size: var(--font-size-2xl);
+}
+
+.md {
+  font-size: var(--font-size-xl);
+}
+
+.sm {
+  font-size: var(--font-size-lg);
+}
+
+.center {
+  text-align: center;
+}

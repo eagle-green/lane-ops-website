@@ -1,0 +1,119 @@
+/*
+ * Design tokens — approximate values transcribed from the supplied design docs
+ * (see docs/IMPLEMENTATION_PLAN.md §2a.2). Swap for exact brand hex codes here
+ * once supplied; this file is the single edit point.
+ *
+ * --color-primary/--color-secondary are darkened from the docs' literal
+ * #FF6A00/#28A745 to the nearest shade that clears WCAG AA (4.5:1) for white
+ * text on a filled button — the literal values fail at ~2.9:1 and ~3.1:1.
+ * Re-verify once exact brand hex codes replace these (see §10).
+ *
+ * Dark-theme tokens (--color-dark-*) added per docs/UI Enhancement Project —
+ * used by the sitewide Header/Footer chrome and the Home page redesign.
+ * Every dark-on-dark pairing below was checked against WCAG AA (4.5:1); see
+ * the project's implementation notes for the computed ratios.
+ */
+
+:root {
+  /* Color */
+  --color-bg: #ffffff;
+  --color-bg-muted: #f7f7f7;
+  --color-primary: #d54000; /* orange — primary CTAs, highlights, warnings */
+  --color-primary-dark: #b33500;
+  --color-primary-bright: #ff8a3d; /* light orange — accents/gradient text on dark backgrounds */
+  --color-secondary: #0a8927; /* green — secondary actions, success, savings */
+  --color-secondary-dark: #076b1e;
+  --color-secondary-on-dark: #35c25a; /* AA-safe bright green for text on dark backgrounds */
+  --color-text: #1a2233; /* dark navy/charcoal */
+  --color-text-muted: #4b5468;
+  --color-border: #e2e5ea;
+  --color-white: #ffffff;
+
+  /* Dark surfaces — sitewide header/footer chrome + Home page sections */
+  --color-dark-bg: #0b1119;
+  --color-dark-bg-deep: #080d13; /* footer — one shade darker than --color-dark-bg */
+  --color-dark-surface: #131c28; /* cards/panels on dark backgrounds */
+  --color-dark-border: rgba(255, 255, 255, 0.09);
+  --color-dark-border-strong: rgba(255, 255, 255, 0.18);
+  --color-dark-text-muted: #a9b3c2; /* 8.9:1 on --color-dark-bg */
+  --color-dark-text-faint: #8b96a7; /* 6.3:1 on --color-dark-bg */
+  --color-dark-text-mono: #798699; /* 4.6:1 on --color-dark-surface (the tighter of the two — also 5.1:1 on --color-dark-bg) — mono labels/timestamps only */
+
+  /* Status tags (vehicle/inventory UI) */
+  --color-status-adequate: var(--color-secondary);
+  --color-status-repair: var(--color-primary);
+  --color-status-inactive: var(--color-text-muted);
+
+  /* Typography */
+  --font-family-base: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Archivo', var(--font-family-base);
+  --font-family-mono: 'IBM Plex Mono', ui-monospace, 'Courier New', monospace;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.75rem;
+  --line-height-tight: 1.2;
+  --line-height-base: 1.5;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4rem;
+  --space-12: 6rem;
+
+  /* Layout */
+  --container-max-width: 1280px;
+  --container-padding-inline: var(--space-5);
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 3px rgba(26, 34, 51, 0.08), 0 8px 24px rgba(26, 34, 51, 0.06);
+  --shadow-card-hover: 0 4px 10px rgba(26, 34, 51, 0.1), 0 16px 32px rgba(26, 34, 51, 0.1);
+  /* Ambient color glow shadows — literal rgba (not derived from --color-primary)
+     because CSS can't blend alpha into a custom property's hex value; keep in
+     sync manually if --color-primary/--color-secondary change. */
+  --shadow-glow-primary: 0 30px 60px -24px rgba(213, 64, 0, 0.35);
+  --shadow-glow-primary-lg: 0 20px 40px -18px rgba(255, 106, 0, 0.55);
+  --shadow-glow-secondary-lg: 0 20px 40px -18px rgba(53, 194, 90, 0.5);
+  --shadow-dark-panel: 0 40px 90px -40px rgba(0, 0, 0, 0.9);
+
+  /* Decorative gradients/tints — brand accents for backgrounds, icon badges,
+     and ambient blobs. Never used behind product screenshots or at strengths
+     that would affect text contrast (see docs/IMPLEMENTATION_PLAN.md §2a.2
+     "DO NOT hide UI behind effects"). */
+  --gradient-brand: linear-gradient(120deg, var(--color-primary), var(--color-secondary));
+  --gradient-hero-text: linear-gradient(
+    100deg,
+    var(--color-primary-bright),
+    var(--color-secondary-on-dark)
+  );
+  --tint-primary-soft: rgba(213, 64, 0, 0.1);
+  --tint-secondary-soft: rgba(10, 137, 39, 0.1);
+  --blob-primary: rgba(213, 64, 0, 0.16);
+  --blob-secondary: rgba(10, 137, 39, 0.16);
+  --blob-primary-strong: rgba(255, 106, 0, 0.3);
+  --blob-secondary-strong: rgba(53, 194, 90, 0.22);
+  --dot-pattern: rgba(26, 34, 51, 0.05);
+  --dot-pattern-dark: rgba(255, 255, 255, 0.055);
+
+  /* Breakpoints (referenced in comments — CSS custom properties can't be used
+     inside media query conditions, so these document the values used
+     throughout src/**\/*.module.css) */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms ease;
+}

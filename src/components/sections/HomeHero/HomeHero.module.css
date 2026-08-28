@@ -1,0 +1,280 @@
+.section {
+  padding-block: var(--space-10) var(--space-12);
+}
+
+.section::before,
+.section::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.section::before {
+  width: 520px;
+  height: 520px;
+  top: -160px;
+  left: -120px;
+  background: radial-gradient(circle, var(--blob-primary-strong) 0%, transparent 68%);
+}
+
+.section::after {
+  width: 600px;
+  height: 600px;
+  bottom: -220px;
+  right: -140px;
+  background: radial-gradient(circle, var(--blob-secondary-strong) 0%, transparent 68%);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (min-width: 1040px) {
+  .grid {
+    grid-template-columns: 1.05fr 1fr;
+  }
+}
+
+.content {
+  max-width: 620px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-secondary-on-dark);
+  border: 1px solid rgba(53, 194, 90, 0.35);
+  background-color: rgba(53, 194, 90, 0.08);
+  padding: var(--space-2) var(--space-4);
+  border-radius: 999px;
+  margin-bottom: var(--space-6);
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--color-secondary-on-dark);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+.headline {
+  position: relative;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 0.98;
+}
+
+/* The real, always-rendered gradient text. Never animated directly — see
+   the note on LetterCovers in HomeHero.tsx for why. display:block (rather
+   than the default inline) makes its first-line-box metrics compute the
+   same way .headlineOverlay's do, so the two layers align vertically. */
+.headlineText {
+  display: block;
+  background: var(--gradient-hero-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Sits exactly on top of .headlineText (same font/width, so line-wrapping
+   matches). Its letters are opaque "covers" that fade out on a stagger,
+   revealing the gradient text underneath. */
+.headlineOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.word {
+  display: inline-block;
+}
+
+.char {
+  display: inline-block;
+  color: transparent;
+  background-color: var(--color-dark-bg);
+  animation: charReveal 550ms cubic-bezier(0.16, 0.84, 0.3, 1) both;
+}
+
+.subheadline {
+  margin-top: var(--space-6);
+  font-size: var(--font-size-lg);
+  color: var(--color-dark-text-muted);
+  max-width: 52ch;
+}
+
+.tagline {
+  margin-top: var(--space-4);
+  font-family: var(--font-family-mono);
+  font-size: 0.8125rem;
+  color: var(--color-dark-text-mono);
+  letter-spacing: 0.02em;
+}
+
+.actions {
+  margin-top: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.outlineBtn {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.outlineBtn:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.visual {
+  position: relative;
+}
+
+.panel {
+  border-radius: 22px;
+  background-color: var(--color-dark-surface);
+  padding: var(--space-2);
+  border: 1px solid var(--color-dark-border);
+  box-shadow: var(--shadow-dark-panel), var(--shadow-glow-primary-lg);
+}
+
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3) var(--space-3);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.22);
+}
+
+.chromeLabel {
+  margin-left: auto;
+  font-family: var(--font-family-mono);
+  font-size: 0.6875rem;
+  color: var(--color-dark-text-mono);
+}
+
+.screen {
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: var(--color-white);
+  position: relative;
+}
+
+.screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sweep {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 65%
+  );
+  animation: sweep 5.5s ease-in-out infinite;
+}
+
+.feedCard {
+  position: absolute;
+  left: -18px;
+  bottom: 42px;
+  width: 268px;
+}
+
+.statBadge {
+  position: absolute;
+  right: -14px;
+  top: -18px;
+  background-color: var(--color-secondary-on-dark);
+  color: #05230d;
+  border-radius: 12px;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  box-shadow: var(--shadow-glow-secondary-lg);
+}
+
+.statValue {
+  display: block;
+  font-size: 1.375rem;
+  line-height: 1;
+}
+
+.statLabel {
+  display: block;
+  font-family: var(--font-family-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(220%);
+  }
+}
+
+@keyframes charReveal {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badgeDot,
+  .sweep {
+    animation: none;
+  }
+
+  .char {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .feedCard {
+    display: none;
+  }
+}
