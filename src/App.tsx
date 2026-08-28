@@ -14,7 +14,7 @@ const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/lane-ops-website">
       <ScrollToTop />
       <Header />
       <main>
