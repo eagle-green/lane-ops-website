@@ -6,9 +6,9 @@ import { bookDemoPath } from '@/data/navigation'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import type { AudienceItem } from '@/types/common'
 
-// No dedicated content spec was supplied for this page (see
-// docs/IMPLEMENTATION_PLAN.md §2a.1) — built against Home's "Who It's For"
-// teaser labels, expanded with descriptions, until real copy arrives.
+// Renamed/reframed from the former "Who It's For" page under the "Solutions"
+// nav item (no dedicated Solutions content spec was supplied — built against
+// the same audience list until real copy arrives).
 const audiences: AudienceItem[] = [
   {
     id: 'traffic-control',
@@ -43,17 +43,17 @@ const audiences: AudienceItem[] = [
   },
 ]
 
-function WhoItsForPage() {
+function Solutions() {
   useDocumentTitle(
-    "Who It's For — LaneOps",
-    'LaneOps is built for traffic control companies, field service businesses, and other operations-heavy teams.',
+    'Solutions — LaneOps',
+    'LaneOps solutions for traffic control companies, field service businesses, and other operations-heavy teams.',
   )
 
   return (
     <>
       <PageIntro
-        eyebrow="Who it's for"
-        title="Who LaneOps Is Built For"
+        eyebrow="Solutions"
+        title="A LaneOps Solution Built Around Your Operation"
         subheadline="Any team running field operations across crews, vehicles, and jobs will find LaneOps fits how they already work."
         actions={[
           { label: 'Book a Demo', to: bookDemoPath, variant: 'primary' },
@@ -77,4 +77,4 @@ function WhoItsForPage() {
   )
 }
 
-export default WhoItsForPage
+export default Solutions

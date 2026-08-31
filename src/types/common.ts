@@ -52,3 +52,9 @@ export interface ROIInputs {
 export interface ROIResult {
   annualSavings: number
 }
+
+export interface FeatureCategory {
+  id: string
+  title: string
+  items: string[]
+}

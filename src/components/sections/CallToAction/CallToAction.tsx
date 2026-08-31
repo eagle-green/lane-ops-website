@@ -4,22 +4,26 @@ import Heading from '@/components/common/Heading'
 import styles from './CallToAction.module.css'
 
 interface CallToActionProps {
+  eyebrow?: string
   title: string
   body?: string
   primaryLabel: string
   primaryTo: string
   secondaryLabel?: string
   secondaryTo?: string
+  footnote?: string
   variant?: 'gradient' | 'dark'
 }
 
 function CallToAction({
+  eyebrow,
   title,
   body,
   primaryLabel,
   primaryTo,
   secondaryLabel,
   secondaryTo,
+  footnote,
   variant = 'gradient',
 }: CallToActionProps) {
   const isDark = variant === 'dark'
@@ -28,6 +32,7 @@ function CallToAction({
     <section className={isDark ? styles.bandDark : styles.band}>
       <Container>
         <div className={styles.wrapper}>
+          {eyebrow && <p className={isDark ? styles.eyebrowDark : styles.eyebrow}>{eyebrow}</p>}
           <Heading level={2} align="center" className={styles.title}>
             {title}
           </Heading>
@@ -47,6 +52,8 @@ function CallToAction({
               </Button>
             )}
           </div>
+
+          {footnote && <p className={isDark ? styles.footnoteDark : styles.footnote}>{footnote}</p>}
         </div>
       </Container>
     </section>

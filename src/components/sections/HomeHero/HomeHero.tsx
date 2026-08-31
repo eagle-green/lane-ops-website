@@ -17,6 +17,7 @@ interface HomeHeroProps {
   headlineAccent: string
   subheadline: string
   tagline: string
+  footnote?: string
   actions: [HomeHeroAction, HomeHeroAction]
   screenshotSrc: string
   screenshotAlt: string
@@ -71,6 +72,7 @@ function HomeHero({
   headlineAccent,
   subheadline,
   tagline,
+  footnote,
   actions,
   screenshotSrc,
   screenshotAlt,
@@ -112,6 +114,7 @@ function HomeHero({
               </Button>
             ))}
           </div>
+          {footnote && <p className={styles.footnote}>{footnote}</p>}
         </div>
 
         <div className={styles.visual}>

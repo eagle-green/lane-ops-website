@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom'
+import Container from '@/components/common/Container'
 import Reveal from '@/components/common/Reveal'
+import Section from '@/components/common/Section'
 import CallToAction from '@/components/sections/CallToAction'
 import Differentiator from '@/components/sections/Differentiator'
 import DispatchPreview from '@/components/sections/DispatchPreview'
@@ -9,15 +12,17 @@ import Marquee from '@/components/sections/Marquee'
 import StatsCounter from '@/components/sections/StatsCounter'
 import ValueStatement from '@/components/sections/ValueStatement'
 import VehicleInventorySpotlight from '@/components/sections/VehicleInventorySpotlight'
+import WorkflowDiagram from '@/components/sections/WorkflowDiagram'
 import dispatchPreview from '@/assets/images/dispatch-preview.svg'
 import heroDashboard from '@/assets/images/hero-dashboard.svg'
 import vehicleSpotlight from '@/assets/images/vehicle-spotlight.svg'
 import { audiences } from '@/data/audiences'
-import { differentiatorItems } from '@/data/benefits'
+import { differentiatorItems, roiValueCards } from '@/data/benefits'
 import { bookDemoPath } from '@/data/navigation'
 import { homeFeatures } from '@/data/services'
 import { homeStats } from '@/data/stats'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
+import styles from './Home.module.css'
 
 const howItWorksSteps = [
   {
@@ -47,33 +52,54 @@ const marqueeItems = audiences.map((audience) => audience.label)
 
 function Home() {
   useDocumentTitle(
-    'LaneOps — Run Your Entire Operation in One System',
-    'Scheduling, dispatch, time tracking, payroll, vehicle and inventory control, and compliance, all in one system.',
+    'LaneOps — The Operating Platform for Traffic Control Companies',
+    'LaneOps connects dispatch, workforce, fleet, equipment, safety, timecards, payroll and billing in one platform built for traffic control operations.',
   )
 
   return (
     <>
       <HomeHero
-        eyebrow="Field operations, one system"
-        headline="Run Your Entire Operation in"
-        headlineAccent="One System"
-        subheadline="Scheduling, dispatch, time tracking, payroll, vehicles and compliance — connected to the same job record, updating live as your crews work."
-        tagline="No missed billing. No manual admin. No disconnected systems."
+        eyebrow="Built for Canadian Traffic Control"
+        headline="Traffic Control Operations."
+        headlineAccent="One Connected Platform."
+        subheadline="LaneOps connects your dispatchers, field crews, supervisors, vehicles, equipment, safety, timecards, payroll and customer billing in one platform built around traffic-control operations."
+        tagline="No disconnected systems. No duplicate entry. No forgotten equipment. No missed billing."
+        footnote="Built in BC. Built for Traffic Control."
         actions={[
           { label: 'Book a Demo', to: bookDemoPath, variant: 'primary' },
           { label: 'See How It Works', to: '/how-it-works', variant: 'outline' },
         ]}
         screenshotSrc={heroDashboard}
-        screenshotAlt="LaneOps dashboard overview showing jobs, dispatch, and crew status"
+        screenshotAlt="LaneOps dispatch and scheduling dashboard showing jobs, crews, and vehicle status"
       />
 
       <Marquee items={marqueeItems} />
 
       <Reveal>
         <ValueStatement
-          headline="Stop Managing — Start Running Your Business"
-          body="LaneOps replaces scattered spreadsheets, paper timesheets, and disconnected tools with one system that keeps every job, crew, and asset visible and accounted for."
+          headline="Stop Managing Software. Start Running Your Operation."
+          body="Traffic-control operations involve more than scheduling workers. Every job involves employees, certifications, vehicles, signs, equipment, safety documentation, timecards, payroll and customer billing. LaneOps connects all of it."
         />
+      </Reveal>
+
+      <Reveal>
+        <Section background="white">
+          <WorkflowDiagram
+            steps={[
+              'Job',
+              'Dispatch',
+              'Crew',
+              'Vehicle',
+              'Equipment',
+              'Timecard',
+              'Payroll',
+              'Invoice',
+            ]}
+          />
+          <p className={styles.workflowStatement}>
+            Enter the information once. LaneOps carries it through the entire operation.
+          </p>
+        </Section>
       </Reveal>
 
       <StatsCounter
@@ -116,6 +142,11 @@ function Home() {
           subtitle="Most tools handle one piece of the job. LaneOps connects all of them."
           items={differentiatorItems}
         />
+        <Container className={styles.sectionLinkWrapper}>
+          <Link to="/why-laneops" className={styles.sectionLink}>
+            See why traffic control operations choose LaneOps →
+          </Link>
+        </Container>
       </Reveal>
 
       <Reveal>
@@ -123,14 +154,23 @@ function Home() {
       </Reveal>
 
       <Reveal>
+        <Differentiator
+          title="LaneOps Is Designed to Find the Revenue Your Operation Is Already Earning"
+          items={roiValueCards}
+        />
+      </Reveal>
+
+      <Reveal>
         <CallToAction
           variant="dark"
-          title="See LaneOps in Action"
-          body="A 30-minute walkthrough with your jobs, your crews, your assets. No slides."
-          primaryLabel="Book a Demo"
+          eyebrow="Ready to See LaneOps?"
+          title="See What Your Traffic Control Operation Looks Like When Everything Is Connected."
+          body="Discover how LaneOps can connect your dispatch, workforce, fleet, equipment, safety, timecards, payroll and billing."
+          primaryLabel="Book Your LaneOps Demo"
           primaryTo={bookDemoPath}
           secondaryLabel="Talk to us first"
           secondaryTo="/contact"
+          footnote="Built in BC. Built for Traffic Control."
         />
       </Reveal>
     </>

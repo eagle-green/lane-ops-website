@@ -1,87 +1,74 @@
+import { Link } from 'react-router-dom'
+import Card from '@/components/common/Card'
+import Heading from '@/components/common/Heading'
 import Reveal from '@/components/common/Reveal'
+import Section from '@/components/common/Section'
 import Benefits from '@/components/sections/Benefits'
 import CallToAction from '@/components/sections/CallToAction'
-import FeatureDetail from '@/components/sections/FeatureDetail'
-import FeatureNav from '@/components/sections/FeatureNav'
 import Hero from '@/components/sections/Hero'
 import ModuleGrid from '@/components/sections/ModuleGrid'
 import featuresHero from '@/assets/images/features-hero.svg'
-import dispatchBoard from '@/assets/images/dispatch-board.svg'
-import timeTracking from '@/assets/images/time-tracking.svg'
-import vehicleInventory from '@/assets/images/vehicle-inventory.svg'
-import payrollInvoicing from '@/assets/images/payroll-invoicing.svg'
-import safetyCompliance from '@/assets/images/safety-compliance.svg'
 import systemOverview from '@/assets/images/system-overview.svg'
 import { featuresResults } from '@/data/benefits'
 import { systemOverviewModules } from '@/data/modules'
 import { bookDemoPath } from '@/data/navigation'
-import { featureModules, featureNavTabs } from '@/data/services'
+import { platformCategories } from '@/data/platformCategories'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
-
-const moduleScreenshots: Record<string, { src: string; alt: string }> = {
-  dispatch: { src: dispatchBoard, alt: 'Dispatch board showing crew and job assignments' },
-  'time-tracking': {
-    src: timeTracking,
-    alt: 'Time tracking screen showing clock-in and clock-out records',
-  },
-  inventory: {
-    src: vehicleInventory,
-    alt: 'Vehicle and inventory control screen showing asset status tags',
-  },
-  payroll: {
-    src: payrollInvoicing,
-    alt: 'Payroll and invoicing screen showing job billing status',
-  },
-  compliance: {
-    src: safetyCompliance,
-    alt: 'Safety and compliance screen showing FLRAs and incident reports',
-  },
-}
+import styles from './Features.module.css'
 
 function Features() {
   useDocumentTitle(
-    'Features — LaneOps',
-    'Dispatch, time tracking, vehicle and inventory control, payroll and invoicing, and safety and compliance, in one system.',
+    'Platform — LaneOps',
+    'Dispatch, workforce, fleet, equipment, safety, timecards, payroll, billing, and reporting, in one traffic-control platform.',
   )
 
   return (
     <>
       <Hero
-        eyebrow="Features"
-        headline="Everything You Need to Run Field Operations"
-        subheadline="One connected system for scheduling, dispatch, time tracking, payroll, vehicle and inventory control, and compliance."
+        eyebrow="Platform"
+        headline="The Operating Platform for Traffic Control Companies"
+        subheadline="Dispatch, workforce, fleet, equipment, safety, timecards, payroll, billing, and reporting — connected in one system built around traffic-control operations."
         bullets={[
-          'Live dispatch board for every crew and job',
-          'Automatic time tracking tied to each job',
-          'Vehicle and inventory status at a glance',
-          'Payroll and invoicing without manual re-entry',
+          'Live dispatch board for every crew, vehicle, and job',
+          'Certifications and scheduling intelligence tied to every worker',
+          'Fleet, equipment, and warehouse inventory in one connected view',
+          'Timecards that drive payroll and billing automatically',
         ]}
         actions={[
           { label: 'Book a Demo', to: bookDemoPath, variant: 'primary' },
-          { label: 'View Platform', to: '#dispatch', variant: 'secondary' },
+          { label: 'See All Features', to: '/features/all', variant: 'secondary' },
         ]}
         screenshotSrc={featuresHero}
-        screenshotAlt="LaneOps dispatch board overview"
+        screenshotAlt="LaneOps dispatch and scheduling dashboard overview"
       />
 
-      <FeatureNav tabs={featureNavTabs} />
+      <Reveal>
+        <Section background="white">
+          <div className={styles.gridHeader}>
+            <Heading level={2} align="center">
+              Explore the Platform, Category by Category
+            </Heading>
+            <p className={styles.gridSubtitle}>
+              Every category below is connected to the same job, crew, and asset records.
+            </p>
+          </div>
 
-      {featureModules.map((feature, index) => {
-        const shot = moduleScreenshots[feature.id]
-        if (!shot) return null
-        return (
-          <Reveal key={feature.id}>
-            <FeatureDetail
-              feature={feature}
-              screenshotSrc={shot.src}
-              screenshotAlt={shot.alt}
-              reverse={index % 2 === 1}
-              showStatusTags={feature.id === 'inventory'}
-              background={index % 2 === 0 ? 'white' : 'muted'}
-            />
-          </Reveal>
-        )
-      })}
+          <div className={styles.categoryGrid}>
+            {platformCategories.map((category) => (
+              <Link key={category.id} to={`/features/${category.id}`} className={styles.cardLink}>
+                <Card className={styles.card}>
+                  <p className={styles.cardEyebrow}>{category.eyebrow}</p>
+                  <Heading level={3} size="sm">
+                    {category.navLabel}
+                  </Heading>
+                  <p className={styles.cardIntro}>{category.intro}</p>
+                  <span className={styles.cardCta}>Explore {category.navLabel} →</span>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </Section>
+      </Reveal>
 
       <Reveal>
         <ModuleGrid

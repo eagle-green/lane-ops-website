@@ -6,7 +6,6 @@ import Heading from '@/components/common/Heading'
 import Section from '@/components/common/Section'
 import PageIntro from '@/components/sections/PageIntro'
 import { CONTACT_EMAIL } from '@/data/contact'
-import { bookDemoPath } from '@/data/navigation'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import styles from './Contact.module.css'
 
@@ -18,7 +17,10 @@ import styles from './Contact.module.css'
  * unconfigured third-party form endpoint.
  */
 function Contact() {
-  useDocumentTitle('Contact — LaneOps', 'Get in touch with the LaneOps team.')
+  useDocumentTitle(
+    'Book a Demo — LaneOps',
+    'Book a LaneOps demo or get in touch with the LaneOps team.',
+  )
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -38,10 +40,9 @@ function Contact() {
   return (
     <>
       <PageIntro
-        eyebrow="Contact"
-        title="Get in Touch"
-        subheadline="Have a question about LaneOps or want to see it in action? Send us a message."
-        actions={[{ label: 'Book a Demo', to: bookDemoPath, variant: 'primary' }]}
+        eyebrow="Book a Demo"
+        title="See What Your Traffic Control Operation Looks Like When Everything Is Connected"
+        subheadline="Tell us a bit about your operation and we'll set up a walkthrough — or just send us a question below."
       />
 
       <Reveal>

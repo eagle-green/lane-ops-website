@@ -1,0 +1,113 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.chain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .chain {
+    flex-direction: row;
+  }
+}
+
+.chainItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .chainItem {
+    flex-direction: row;
+  }
+}
+
+.step {
+  font-family: var(--font-family-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  background-color: var(--tint-primary-soft);
+  border: 1px solid rgba(213, 64, 0, 0.25);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-4);
+  white-space: nowrap;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transform: rotate(90deg);
+}
+
+@media (min-width: 768px) {
+  .arrow {
+    transform: none;
+  }
+}
+
+.branchWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.branchArrow {
+  width: 16px;
+  height: 16px;
+  color: var(--color-text-muted);
+  transform: rotate(90deg);
+}
+
+.branches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.branch {
+  font-family: var(--font-family-mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-secondary-dark);
+  background-color: var(--tint-secondary-soft);
+  border: 1px solid rgba(10, 137, 39, 0.25);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-4);
+}
+
+.dark .step {
+  color: var(--color-primary-bright);
+  background-color: rgba(255, 138, 61, 0.12);
+  border-color: rgba(255, 138, 61, 0.3);
+}
+
+.dark .branch {
+  color: var(--color-secondary-on-dark);
+  background-color: rgba(53, 194, 90, 0.12);
+  border-color: rgba(53, 194, 90, 0.3);
+}
+
+.dark .arrow,
+.dark .branchArrow {
+  color: var(--color-dark-text-muted);
+}

@@ -11,12 +11,56 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://laneops.com/features/dispatch-scheduling</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/workforce-management</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/fleet-management</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/inventory-equipment</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/safety-compliance</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/timecards</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/payroll-billing</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/reporting</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://laneops.com/how-it-works</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://laneops.com/who-its-for</loc>
+    <loc>https://laneops.com/solutions</loc>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/why-laneops</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/about</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://laneops.com/features/all</loc>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://laneops.com/contact</loc>

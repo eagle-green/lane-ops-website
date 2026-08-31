@@ -85,6 +85,53 @@
   color: var(--color-white);
 }
 
+.accordionTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  color: var(--color-dark-text-muted);
+  padding-block: var(--space-2);
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.subList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-left: var(--space-4);
+  margin-top: var(--space-1);
+}
+
+.subLink {
+  display: block;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-dark-text-faint);
+  padding-block: var(--space-2);
+}
+
+.subLink:hover {
+  color: var(--color-white);
+}
+
 @media (min-width: 768px) {
   .overlay,
   .panel {

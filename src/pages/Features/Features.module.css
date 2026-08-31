@@ -1,0 +1,64 @@
+.gridHeader {
+  max-width: 60ch;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.gridSubtitle {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.categoryGrid {
+  margin-top: var(--space-8);
+  display: grid;
+  gap: var(--space-5);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .categoryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cardLink {
+  display: block;
+  color: inherit;
+}
+
+.card {
+  height: 100%;
+  padding: var(--space-5);
+}
+
+.cardEyebrow {
+  font-family: var(--font-family-mono);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.cardIntro {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.cardCta {
+  display: inline-block;
+  margin-top: var(--space-4);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-dark);
+}

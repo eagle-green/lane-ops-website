@@ -3,6 +3,21 @@
   padding-block: var(--space-6);
 }
 
+.eyebrow,
+.eyebrowDark {
+  margin-bottom: var(--space-3);
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.eyebrowDark {
+  color: var(--color-secondary-on-dark);
+}
+
 .title {
   color: var(--color-white);
 }
@@ -89,4 +104,16 @@
 
 .secondaryBtn:hover {
   background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footnote,
+.footnoteDark {
+  margin-top: var(--space-5);
+  font-family: var(--font-family-mono);
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footnoteDark {
+  color: var(--color-dark-text-mono);
 }

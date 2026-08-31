@@ -55,6 +55,34 @@ export const differentiatorItems: BenefitItem[] = [
 /** Home — 4-card benefits summary (same content as the first 4 differentiator items). */
 export const homeBenefits: BenefitItem[] = differentiatorItems.slice(0, 4)
 
+/** Home — ROI/business-value band, 4 cards. */
+export const roiValueCards: BenefitItem[] = [
+  {
+    id: 'reduce-missed-billing',
+    title: 'Reduce Missed Billing',
+    description: 'Capture labour, equipment and rentals.',
+    icon: 'receipt',
+  },
+  {
+    id: 'reduce-administration',
+    title: 'Reduce Administration',
+    description: 'Enter operational information once instead of repeatedly.',
+    icon: 'zap',
+  },
+  {
+    id: 'control-equipment',
+    title: 'Control Equipment',
+    description: 'Know where company inventory is located.',
+    icon: 'truck',
+  },
+  {
+    id: 'reduce-paper',
+    title: 'Reduce Paper',
+    description: 'Digitize timecards, inspections, safety forms and employee records.',
+    icon: 'shield',
+  },
+]
+
 /** Features page — "Results" section, 4 cards. */
 export const featuresResults: BenefitItem[] = [
   {

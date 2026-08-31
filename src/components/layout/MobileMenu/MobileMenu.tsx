@@ -1,8 +1,53 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Button from '@/components/common/Button'
-import { bookDemoPath, navItems } from '@/data/navigation'
+import { bookDemoPath, navItems, platformDropdownItems } from '@/data/navigation'
 import { useMobileMenu } from '@/hooks/useMobileMenu'
 import styles from './MobileMenu.module.css'
+
+function PlatformAccordion({ onNavigate }: { onNavigate: () => void }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  return (
+    <li>
+      <button
+        type="button"
+        className={styles.accordionTrigger}
+        aria-expanded={isExpanded}
+        aria-controls="mobile-platform-submenu"
+        onClick={() => setIsExpanded((prev) => !prev)}
+      >
+        Platform
+        <svg
+          className={isExpanded ? `${styles.chevron} ${styles.chevronOpen}` : styles.chevron}
+          viewBox="0 0 12 8"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M1 1.5L6 6.5L11 1.5"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      {isExpanded && (
+        <ul id="mobile-platform-submenu" className={styles.subList}>
+          {platformDropdownItems.map((item) => (
+            <li key={item.id}>
+              <NavLink to={item.path} className={styles.subLink} onClick={onNavigate}>
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </li>
+  )
+}
 
 function MobileMenu() {
   const { isOpen, open, close, containerRef } = useMobileMenu()
@@ -62,19 +107,23 @@ function MobileMenu() {
 
             <nav aria-label="Mobile">
               <ul className={styles.list}>
-                {navItems.map((item) => (
-                  <li key={item.id}>
-                    <NavLink
-                      to={item.path}
-                      end
-                      className={({ isActive }) =>
-                        isActive ? `${styles.link} ${styles.linkActive}` : styles.link
-                      }
-                    >
-                      {item.label}
-                    </NavLink>
-                  </li>
-                ))}
+                {navItems.map((item) =>
+                  item.id === 'platform' ? (
+                    <PlatformAccordion key={item.id} onNavigate={close} />
+                  ) : (
+                    <li key={item.id}>
+                      <NavLink
+                        to={item.path}
+                        end
+                        className={({ isActive }) =>
+                          isActive ? `${styles.link} ${styles.linkActive}` : styles.link
+                        }
+                      >
+                        {item.label}
+                      </NavLink>
+                    </li>
+                  ),
+                )}
               </ul>
             </nav>
 

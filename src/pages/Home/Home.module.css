@@ -1,0 +1,22 @@
+.workflowStatement {
+  margin-top: var(--space-6);
+  max-width: 56ch;
+  margin-inline: auto;
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+}
+
+.sectionLinkWrapper {
+  margin-top: var(--space-8);
+  text-align: center;
+}
+
+.sectionLink {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.sectionLink:hover {
+  text-decoration: underline;
+}

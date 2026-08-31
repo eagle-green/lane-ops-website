@@ -14,7 +14,9 @@ function Footer() {
           <div>
             <Link to="/" className={styles.logo} aria-label="LaneOps home">
               <span className={styles.logoMark} aria-hidden="true" />
-              Lane<span className={styles.logoOps}>Ops</span>
+              <span>
+                Lane<span className={styles.logoOps}>Ops</span>
+              </span>
             </Link>
             <p className={styles.tagline}>
               One system for scheduling, dispatch, time, payroll, assets and compliance.
@@ -31,6 +33,11 @@ function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link to="/pricing" className={styles.link}>
+                  Pricing & Savings Calculator
+                </Link>
+              </li>
             </ul>
           </div>
 
