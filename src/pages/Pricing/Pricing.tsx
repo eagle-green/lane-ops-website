@@ -1,7 +1,7 @@
 import Reveal from '@/components/common/Reveal'
 import CallToAction from '@/components/sections/CallToAction'
 import PageIntro from '@/components/sections/PageIntro'
-import ROICalculator from '@/components/sections/ROICalculator'
+import SolutionTiers from '@/components/sections/SolutionTiers'
 import TrustBand from '@/components/sections/TrustBand'
 import { bookDemoPath } from '@/data/navigation'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
@@ -28,7 +28,7 @@ const heroCards = [
 function Pricing() {
   useDocumentTitle(
     'Pricing & Demo — LaneOps',
-    'See what LaneOps could save your operation and book a demo, no pricing tiers to compare.',
+    'LaneOps solution packages built around your operation, plus an estimate of what switching could save you.',
   )
 
   return (
@@ -36,7 +36,7 @@ function Pricing() {
       <PageIntro
         eyebrow="Pricing"
         title="Pricing Built Around Your Operation"
-        subheadline="No pricing tiers to compare, just a system built for how field operations actually run. See what it could save you below."
+        subheadline="See the LaneOps solution built for how field operations actually run, then find out what it could save you below."
         actions={[{ label: 'Book a Demo', to: bookDemoPath, variant: 'primary' }]}
       >
         <div className={styles.cards}>
@@ -50,7 +50,16 @@ function Pricing() {
       </PageIntro>
 
       <Reveal>
-        <ROICalculator />
+        <SolutionTiers />
+      </Reveal>
+
+      <Reveal>
+        <CallToAction
+          title="See What LaneOps Could Save You"
+          body="Try the savings calculator — enter a few numbers about your operation and get an adjustable, downloadable estimate."
+          primaryLabel="Calculate My Savings"
+          primaryTo="/savings-calculator"
+        />
       </Reveal>
 
       <Reveal>

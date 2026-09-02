@@ -54,7 +54,7 @@ function VehicleInventorySpotlight({
           </div>
         </div>
 
-        <ProductScreenshot src={screenshotSrc} alt={screenshotAlt} />
+        <ProductScreenshot src={screenshotSrc} alt={screenshotAlt} chrome={false} />
       </div>
     </Section>
   )

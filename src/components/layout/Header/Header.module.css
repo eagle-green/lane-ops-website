@@ -37,7 +37,8 @@
   width: 28px;
   height: 28px;
   border-radius: 9px;
-  background: var(--gradient-brand);
+  object-fit: cover;
+  display: block;
   flex-shrink: 0;
 }
 

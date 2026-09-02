@@ -30,7 +30,8 @@
   width: 26px;
   height: 26px;
   border-radius: 8px;
-  background: var(--gradient-brand);
+  object-fit: cover;
+  display: block;
   flex-shrink: 0;
 }
 

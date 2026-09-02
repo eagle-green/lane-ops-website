@@ -10,10 +10,10 @@ const PlatformCategory = lazy(() => import('@/pages/PlatformCategory'))
 const HowItWorks = lazy(() => import('@/pages/HowItWorks'))
 const Solutions = lazy(() => import('@/pages/Solutions'))
 const WhyLaneOps = lazy(() => import('@/pages/WhyLaneOps'))
-const About = lazy(() => import('@/pages/About'))
 const AllFeatures = lazy(() => import('@/pages/AllFeatures'))
 const Contact = lazy(() => import('@/pages/Contact'))
 const Pricing = lazy(() => import('@/pages/Pricing'))
+const SavingsCalculatorPage = lazy(() => import('@/pages/SavingsCalculatorPage'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function App() {
@@ -29,11 +29,11 @@ function App() {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/why-laneops" element={<WhyLaneOps />} />
-            <Route path="/about" element={<About />} />
             <Route path="/features/all" element={<AllFeatures />} />
             <Route path="/features/:categoryId" element={<PlatformCategory />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/savings-calculator" element={<SavingsCalculatorPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

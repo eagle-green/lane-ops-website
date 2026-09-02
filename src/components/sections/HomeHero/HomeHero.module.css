@@ -35,7 +35,7 @@
 
 @media (min-width: 1040px) {
   .grid {
-    grid-template-columns: 1.05fr 1fr;
+    grid-template-columns: 0.85fr 1.15fr;
   }
 }
 
@@ -151,37 +151,11 @@
 
 .panel {
   border-radius: 22px;
-  background-color: var(--color-dark-surface);
-  padding: var(--space-2);
-  border: 1px solid var(--color-dark-border);
+  overflow: hidden;
   box-shadow: var(--shadow-dark-panel), var(--shadow-glow-primary-lg);
 }
 
-.chrome {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-2) var(--space-3) var(--space-3);
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.22);
-}
-
-.chromeLabel {
-  margin-left: auto;
-  font-family: var(--font-family-mono);
-  font-size: 0.6875rem;
-  color: var(--color-dark-text-mono);
-}
-
 .screen {
-  border-radius: 14px;
-  overflow: hidden;
-  background-color: var(--color-white);
   position: relative;
 }
 
@@ -191,22 +165,10 @@
   height: auto;
 }
 
-.sweep {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(255, 255, 255, 0.55) 50%,
-    transparent 65%
-  );
-  animation: sweep 5.5s ease-in-out infinite;
-}
-
 .feedCard {
   position: absolute;
-  left: -18px;
-  bottom: 42px;
+  right: -18px;
+  bottom: -70px;
   width: 268px;
 }
 
@@ -251,15 +213,6 @@
   }
 }
 
-@keyframes sweep {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(220%);
-  }
-}
-
 @keyframes charReveal {
   from {
     opacity: 1;
@@ -270,8 +223,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .badgeDot,
-  .sweep {
+  .badgeDot {
     animation: none;
   }
 

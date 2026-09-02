@@ -44,13 +44,33 @@ export interface Testimonial {
 }
 
 export interface ROIInputs {
-  fleetSize: number
-  monthlyPayroll: number
-  monthlyJobs: number
+  employeeCount: number
+  averageWage: number
+  adminWage: number
+  weeklyHoursPerEmployee: number
+  weeklySchedulingAdminHours: number
+  payrollCorrectionHours: number
+  fleetAdminHours: number
+  currentSoftwareSpend: number
+  revenue: number
+  adminTimeReductionRate: number
+  minutesRecoveredPerDay: number
+}
+
+export interface ROIBreakdownItem {
+  id: string
+  label: string
+  amount: number
 }
 
 export interface ROIResult {
   annualSavings: number
+  monthlySavings: number
+  hoursRecoveredPerWeek: number
+  systemsReplacedEstimate: number
+  roiPercent: number
+  savingsAsPercentOfRevenue?: number
+  breakdown: ROIBreakdownItem[]
 }
 
 export interface FeatureCategory {

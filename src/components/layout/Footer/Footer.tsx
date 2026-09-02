@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Container from '@/components/common/Container'
+import laneOpsLogo from '@/assets/images/lane-ops-logo.png'
 import { CONTACT_EMAIL } from '@/data/contact'
 import { navItems } from '@/data/navigation'
 import styles from './Footer.module.css'
@@ -13,7 +14,7 @@ function Footer() {
         <div className={styles.grid}>
           <div>
             <Link to="/" className={styles.logo} aria-label="LaneOps home">
-              <span className={styles.logoMark} aria-hidden="true" />
+              <img src={laneOpsLogo} alt="" className={styles.logoMark} aria-hidden="true" />
               <span>
                 Lane<span className={styles.logoOps}>Ops</span>
               </span>
@@ -35,7 +36,7 @@ function Footer() {
               ))}
               <li>
                 <Link to="/pricing" className={styles.link}>
-                  Pricing & Savings Calculator
+                  Solution Packages
                 </Link>
               </li>
             </ul>

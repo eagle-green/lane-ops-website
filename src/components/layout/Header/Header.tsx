@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Button from '@/components/common/Button'
 import Container from '@/components/common/Container'
+import laneOpsLogo from '@/assets/images/lane-ops-logo.png'
 import { bookDemoPath } from '@/data/navigation'
 import Navigation from '../Navigation'
 import MobileMenu from '../MobileMenu'
@@ -12,7 +13,7 @@ function Header() {
       <Container>
         <div className={styles.inner}>
           <Link to="/" className={styles.logo} aria-label="LaneOps home">
-            <span className={styles.logoMark} aria-hidden="true" />
+            <img src={laneOpsLogo} alt="" className={styles.logoMark} aria-hidden="true" />
             <span>
               Lane<span className={styles.logoOps}>Ops</span>
             </span>

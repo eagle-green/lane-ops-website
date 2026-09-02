@@ -11,7 +11,7 @@ export const navItems: NavItem[] = [
   { id: 'solutions', label: 'Solutions', path: '/solutions' },
   { id: 'how-it-works', label: 'How It Works', path: '/how-it-works' },
   { id: 'why-laneops', label: 'Why LaneOps', path: '/why-laneops' },
-  { id: 'about', label: 'About', path: '/about' },
+  { id: 'savings-calculator', label: 'Savings Calculator', path: '/savings-calculator' },
 ]
 
 /**

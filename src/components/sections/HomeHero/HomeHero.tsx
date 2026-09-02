@@ -119,15 +119,8 @@ function HomeHero({
 
         <div className={styles.visual}>
           <div className={styles.panel}>
-            <div className={styles.chrome} aria-hidden="true">
-              <span className={styles.dot} />
-              <span className={styles.dot} />
-              <span className={styles.dot} />
-              <span className={styles.chromeLabel}>laneops / dispatch</span>
-            </div>
             <div className={styles.screen}>
               <img src={screenshotSrc} alt={screenshotAlt} />
-              <div className={styles.sweep} aria-hidden="true" />
             </div>
           </div>
 

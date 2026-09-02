@@ -13,9 +13,9 @@ import StatsCounter from '@/components/sections/StatsCounter'
 import ValueStatement from '@/components/sections/ValueStatement'
 import VehicleInventorySpotlight from '@/components/sections/VehicleInventorySpotlight'
 import WorkflowDiagram from '@/components/sections/WorkflowDiagram'
-import dispatchPreview from '@/assets/images/dispatch-preview.svg'
-import heroDashboard from '@/assets/images/hero-dashboard.svg'
-import vehicleSpotlight from '@/assets/images/vehicle-spotlight.svg'
+import homeDashboard from '@/assets/images/home-dashboard.png'
+import inventoryResponsiveViews from '@/assets/images/inventory-responsive-views.png'
+import liveDispatchNote from '@/assets/images/live-dispatch-note.png'
 import { audiences } from '@/data/audiences'
 import { differentiatorItems, roiValueCards } from '@/data/benefits'
 import { bookDemoPath } from '@/data/navigation'
@@ -69,8 +69,8 @@ function Home() {
           { label: 'Book a Demo', to: bookDemoPath, variant: 'primary' },
           { label: 'See How It Works', to: '/how-it-works', variant: 'outline' },
         ]}
-        screenshotSrc={heroDashboard}
-        screenshotAlt="LaneOps dispatch and scheduling dashboard showing jobs, crews, and vehicle status"
+        screenshotSrc={homeDashboard}
+        screenshotAlt="LaneOps Board View showing job cards with crew assignments and worker status, on desktop and mobile"
       />
 
       <Marquee items={marqueeItems} />
@@ -116,8 +116,8 @@ function Home() {
       </Reveal>
 
       <DispatchPreview
-        screenshotSrc={dispatchPreview}
-        screenshotAlt="LaneOps dispatch board showing crews and jobs organized by column"
+        screenshotSrc={liveDispatchNote}
+        screenshotAlt="LaneOps Dispatch Note screen showing active crews, pending acceptance, and job assignments for Riverside Metro"
       />
 
       <Reveal>
@@ -131,8 +131,8 @@ function Home() {
             'Inventory counts by job and location',
             'Full assignment history',
           ]}
-          screenshotSrc={vehicleSpotlight}
-          screenshotAlt="Vehicle and inventory control screen showing asset status tags"
+          screenshotSrc={inventoryResponsiveViews}
+          screenshotAlt="LaneOps Inventory screen showing traffic control signs and stock counts, on desktop, tablet, and mobile"
         />
       </Reveal>
 
