@@ -20,6 +20,7 @@ interface HeroProps {
   actions: HeroAction[]
   screenshotSrc: string
   screenshotAlt: string
+  screenshotChrome?: boolean
   reverse?: boolean
 }
 
@@ -32,6 +33,7 @@ function Hero({
   actions,
   screenshotSrc,
   screenshotAlt,
+  screenshotChrome = true,
   reverse = false,
 }: HeroProps) {
   return (
@@ -84,7 +86,12 @@ function Hero({
         </div>
 
         <div className={styles.visual}>
-          <ProductScreenshot src={screenshotSrc} alt={screenshotAlt} priority />
+          <ProductScreenshot
+            src={screenshotSrc}
+            alt={screenshotAlt}
+            priority
+            chrome={screenshotChrome}
+          />
         </div>
       </div>
     </Section>

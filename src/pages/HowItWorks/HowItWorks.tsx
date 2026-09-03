@@ -22,6 +22,12 @@ const steps = [
       'Crews clock in and out per job, add notes and photos, and update status from the field, all tied to the job record.',
   },
   {
+    id: 'manage-timesheets',
+    title: 'Manage Timesheets',
+    description:
+      'Submitted hours move from draft to manager review to approved, all before payroll or billing ever touches them. Missing-timesheet detection catches gaps before they become a problem.',
+  },
+  {
     id: 'run-payroll-billing',
     title: 'Run Payroll and Billing',
     description:
@@ -48,7 +54,7 @@ function HowItWorksPage() {
       />
 
       <Reveal>
-        <HowItWorksSection title="Three Steps, One System" steps={steps} />
+        <HowItWorksSection title="Four Steps, One System" steps={steps} />
       </Reveal>
 
       <Reveal>

@@ -42,6 +42,7 @@ function PlatformCategory() {
         ]}
         screenshotSrc={category.screenshot}
         screenshotAlt={category.screenshotAlt}
+        screenshotChrome={category.screenshotChrome ?? true}
       />
 
       {category.sections.map((section, sectionIndex) => (

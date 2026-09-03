@@ -40,6 +40,13 @@ const howItWorksSteps = [
     chips: ['mobile clock-in', 'photos + notes', 'live status'],
   },
   {
+    id: 'manage-timesheets',
+    title: 'Manage Timesheets',
+    description:
+      'Submitted hours move from draft to manager review to approved, all before payroll or billing ever touches them. Missing-timesheet detection catches gaps before they become a problem.',
+    chips: ['manager approval', 'missing-timesheet detection', 'payroll-ready'],
+  },
+  {
     id: 'run-payroll-and-billing',
     title: 'Run Payroll and Billing',
     description:

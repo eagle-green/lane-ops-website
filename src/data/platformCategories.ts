@@ -1,7 +1,7 @@
-import dispatchBoard from '@/assets/images/dispatch-board.svg'
-import workforceManagement from '@/assets/images/workforce-management.svg'
-import vehicleInventory from '@/assets/images/vehicle-inventory.svg'
-import inventoryEquipment from '@/assets/images/inventory-equipment.svg'
+import jobListResponsiveViews from '@/assets/images/job-list-responsive-views.png'
+import liveDispatchNote from '@/assets/images/live-dispatch-note.png'
+import vehicleDashboardResponsiveViews from '@/assets/images/vehicle-dashboard-responsive-views.png'
+import inventoryResponsiveViews from '@/assets/images/inventory-responsive-views.png'
 import safetyCompliance from '@/assets/images/safety-compliance.svg'
 import timeTracking from '@/assets/images/time-tracking.svg'
 import payrollInvoicing from '@/assets/images/payroll-invoicing.svg'
@@ -35,6 +35,8 @@ export interface PlatformCategoryDetail {
   intro: string
   screenshot: string
   screenshotAlt: string
+  /** Set false when the screenshot already has its own realistic app chrome baked in. */
+  screenshotChrome?: boolean
   showStatusTags?: boolean
   sections: PlatformCategorySection[]
   workflow?: PlatformCategoryWorkflow
@@ -57,8 +59,10 @@ export const platformCategories: PlatformCategoryDetail[] = [
     title: 'See Your Entire Operation From One Dispatch Screen',
     intro:
       'Give dispatchers a real-time view of the people, vehicles, equipment and jobs required to run the day — then create jobs, assign crews, move schedules and respond to changes from one connected dispatch centre.',
-    screenshot: dispatchBoard,
-    screenshotAlt: 'Dispatch board showing crew, vehicle, and job assignments',
+    screenshot: liveDispatchNote,
+    screenshotAlt:
+      'LaneOps Dispatch Note screen showing active crews, pending acceptance, and job assignments for Riverside Metro',
+    screenshotChrome: false,
     sections: [
       {
         heading: 'Everything Dispatch Needs to See',
@@ -110,8 +114,10 @@ export const platformCategories: PlatformCategoryDetail[] = [
     title: 'Know Your Workforce — Not Just Their Schedule',
     intro:
       'Every employee has a complete digital profile containing the information management needs to schedule, manage and support the workforce.',
-    screenshot: workforceManagement,
-    screenshotAlt: 'Workforce management screen showing employee profiles and certifications',
+    screenshot: jobListResponsiveViews,
+    screenshotAlt:
+      'LaneOps job list screen showing employee assignments and job status, on desktop, tablet, and mobile',
+    screenshotChrome: false,
     sections: [
       {
         heading: 'A Complete Employee Profile',
@@ -153,8 +159,10 @@ export const platformCategories: PlatformCategoryDetail[] = [
     title: 'Your Entire Fleet. One Dashboard.',
     intro:
       'Know the status, driver, location, equipment and history of every vehicle in your operation.',
-    screenshot: vehicleInventory,
-    screenshotAlt: 'Fleet management screen showing vehicle status and history',
+    screenshot: vehicleDashboardResponsiveViews,
+    screenshotAlt:
+      'LaneOps vehicle dashboard showing fleet status and history, on desktop, tablet, and mobile',
+    screenshotChrome: false,
     showStatusTags: true,
     sections: [
       {
@@ -186,8 +194,10 @@ export const platformCategories: PlatformCategoryDetail[] = [
     title: 'If Equipment Stays On Site, LaneOps Keeps Track of It',
     intro:
       'Equipment left on a customer site should not disappear from your inventory — or your invoice.',
-    screenshot: inventoryEquipment,
-    screenshotAlt: 'Equipment and inventory screen showing rental and warehouse tracking',
+    screenshot: inventoryResponsiveViews,
+    screenshotAlt:
+      'LaneOps Inventory screen showing traffic control signs and stock counts, on desktop, tablet, and mobile',
+    screenshotChrome: false,
     sections: [
       {
         heading: 'How Automated Rentals Work',
