@@ -10,6 +10,7 @@ import HomeHero from '@/components/sections/HomeHero'
 import HowItWorks from '@/components/sections/HowItWorks'
 import Marquee from '@/components/sections/Marquee'
 import StatsCounter from '@/components/sections/StatsCounter'
+import TrustBand from '@/components/sections/TrustBand'
 import ValueStatement from '@/components/sections/ValueStatement'
 import VehicleInventorySpotlight from '@/components/sections/VehicleInventorySpotlight'
 import WorkflowDiagram from '@/components/sections/WorkflowDiagram'
@@ -111,8 +112,27 @@ function Home() {
 
       <StatsCounter
         stats={homeStats}
-        footnote="Example figures for a typical mid-size field service operation."
+        footnote="Example figures for a typical mid-size traffic control operation."
       />
+
+      <Reveal>
+        <TrustBand
+          highlight="Certification Tracking"
+          title="LaneOps Checks More Than Availability"
+          body="Scheduling a traffic control worker takes more than finding someone who isn't working. LaneOps blocks the assignment when a requirement isn't met — the right worker, on the right job, with the right qualifications."
+          checklist={[
+            'TCP Certification Valid',
+            "Driver's Licence Valid",
+            'Required Orientation Complete',
+            'Employee Available',
+            'Vehicle Available',
+            'Equipment Available',
+            'No Time-Off Conflict',
+            'Worker Compatibility',
+          ]}
+          background="white"
+        />
+      </Reveal>
 
       <Reveal>
         <FeatureGrid
@@ -146,7 +166,7 @@ function Home() {
       <Reveal>
         <Differentiator
           title="Where Other Systems Stop — LaneOps Starts"
-          subtitle="Most tools handle one piece of the job. LaneOps connects all of them."
+          subtitle="Still running things through spreadsheets, whiteboards, paper timesheets, or a general field-service tool that wasn't built for TCPs? Here's what changes."
           items={differentiatorItems}
         />
         <Container className={styles.sectionLinkWrapper}>

@@ -1,11 +1,15 @@
 import type { AudienceItem } from '@/types/common'
 
-/** "Who LaneOps Is Built For" — used as Home's teaser and the standalone Who It's For page. */
+/**
+ * Home's scrolling marquee. LaneOps positions as traffic-control-only, so
+ * every entry names a traffic-control segment specifically rather than a
+ * generic field-service/operations category (see marketing review).
+ */
 export const audiences: AudienceItem[] = [
   { id: 'traffic-control', label: 'Traffic Control Companies' },
-  { id: 'field-service', label: 'Field Service Businesses' },
-  { id: 'construction-crews', label: 'Construction Crews' },
-  { id: 'operations-heavy-teams', label: 'Operations-Heavy Teams' },
-  { id: 'vehicle-equipment-managers', label: 'Companies Managing Vehicles and Equipment' },
-  { id: 'replacing-manual-systems', label: 'Businesses Replacing Manual Systems and Spreadsheets' },
+  { id: 'lane-closure', label: 'Lane Closure & Traffic Management Providers' },
+  { id: 'tcp-staffing', label: 'TCP Staffing Companies' },
+  { id: 'municipal-utility', label: 'Municipal & Utility Traffic Control Contractors' },
+  { id: 'road-construction', label: 'Road Construction Traffic Control' },
+  { id: 'event-traffic-control', label: 'Event Traffic Control Companies' },
 ]

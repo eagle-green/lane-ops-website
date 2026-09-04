@@ -65,7 +65,9 @@ function SavingsCalculator() {
   const reductionRateId = useId()
   const minutesRecoveredId = useId()
 
-  function handleChange(field: keyof ROIInputs, value: string) {
+  function handleChange(field: keyof ROIInputs, rawValue: string) {
+    // Strip anything but digits/decimal so pasted or typed junk can't reach state.
+    const value = rawValue.replace(/[^0-9.]/g, '')
     const parsed = value === '' ? 0 : Number(value)
     setInputs((prev) => ({ ...prev, [field]: Number.isNaN(parsed) ? prev[field] : parsed }))
   }
@@ -160,9 +162,9 @@ function SavingsCalculator() {
             <input
               id={employeeCountId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="numeric"
-              min={0}
+              pattern="[0-9]*"
               value={inputs.employeeCount}
               onChange={(event) => handleChange('employeeCount', event.target.value)}
             />
@@ -175,9 +177,9 @@ function SavingsCalculator() {
             <input
               id={averageWageId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="decimal"
-              min={0}
+              pattern="[0-9]*\.?[0-9]*"
               value={inputs.averageWage}
               onChange={(event) => handleChange('averageWage', event.target.value)}
             />
@@ -190,9 +192,9 @@ function SavingsCalculator() {
             <input
               id={adminWageId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="decimal"
-              min={0}
+              pattern="[0-9]*\.?[0-9]*"
               value={inputs.adminWage}
               onChange={(event) => handleChange('adminWage', event.target.value)}
             />
@@ -205,9 +207,9 @@ function SavingsCalculator() {
             <input
               id={weeklyHoursId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="numeric"
-              min={0}
+              pattern="[0-9]*"
               value={inputs.weeklyHoursPerEmployee}
               onChange={(event) => handleChange('weeklyHoursPerEmployee', event.target.value)}
             />
@@ -220,9 +222,9 @@ function SavingsCalculator() {
             <input
               id={schedulingHoursId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="numeric"
-              min={0}
+              pattern="[0-9]*"
               value={inputs.weeklySchedulingAdminHours}
               onChange={(event) => handleChange('weeklySchedulingAdminHours', event.target.value)}
             />
@@ -236,9 +238,9 @@ function SavingsCalculator() {
             <input
               id={payrollHoursId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="numeric"
-              min={0}
+              pattern="[0-9]*"
               value={inputs.payrollCorrectionHours}
               onChange={(event) => handleChange('payrollCorrectionHours', event.target.value)}
             />
@@ -252,9 +254,9 @@ function SavingsCalculator() {
             <input
               id={fleetHoursId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="numeric"
-              min={0}
+              pattern="[0-9]*"
               value={inputs.fleetAdminHours}
               onChange={(event) => handleChange('fleetAdminHours', event.target.value)}
             />
@@ -268,9 +270,9 @@ function SavingsCalculator() {
             <input
               id={softwareSpendId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="decimal"
-              min={0}
+              pattern="[0-9]*\.?[0-9]*"
               value={inputs.currentSoftwareSpend}
               onChange={(event) => handleChange('currentSoftwareSpend', event.target.value)}
             />
@@ -284,9 +286,9 @@ function SavingsCalculator() {
             <input
               id={revenueId}
               className={styles.input}
-              type="number"
+              type="text"
               inputMode="decimal"
-              min={0}
+              pattern="[0-9]*\.?[0-9]*"
               value={inputs.revenue || ''}
               onChange={(event) => handleChange('revenue', event.target.value)}
             />

@@ -130,13 +130,6 @@ export const allFeatureCategories: FeatureCategory[] = [
     ],
   },
   {
-    id: 'reporting',
-    title: 'Reporting',
-    items: [
-      'Dashboards across jobs, workforce, vehicles, inventory, payroll, billing, and attendance',
-    ],
-  },
-  {
     id: 'invoicing',
     title: 'Invoicing',
     items: [

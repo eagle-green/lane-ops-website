@@ -23,7 +23,7 @@ function Differentiator({ title, subtitle, items }: DifferentiatorProps) {
 
       <div className={styles.grid}>
         {items.map((item, index) => (
-          <Card key={item.id} hoverLift>
+          <Card key={item.id} hoverLift className={styles.cardHoverArea}>
             <span
               className={`${styles.icon} ${index % 2 === 0 ? styles.iconPrimary : styles.iconSecondary}`}
             >

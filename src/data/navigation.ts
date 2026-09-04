@@ -39,7 +39,6 @@ export const platformDropdownItems: NavItem[] = [
   { id: 'safety-compliance', label: 'Safety & Compliance', path: '/features/safety-compliance' },
   { id: 'timecards', label: 'Timecards', path: '/features/timecards' },
   { id: 'payroll-billing', label: 'Payroll & Billing', path: '/features/payroll-billing' },
-  { id: 'reporting', label: 'Reporting', path: '/features/reporting' },
   { id: 'all-features', label: 'All Features', path: '/features/all' },
 ]
 
