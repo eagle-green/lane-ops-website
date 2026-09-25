@@ -70,6 +70,12 @@
   font-weight: 600;
 }
 
+.optional {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
 .input,
 .textarea {
   padding: var(--space-3) var(--space-4);

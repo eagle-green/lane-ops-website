@@ -57,7 +57,7 @@ export const platformCategories: PlatformCategoryDetail[] = [
     eyebrow: 'Operations',
     title: 'See Your Entire Operation From One Dispatch Screen',
     intro:
-      'Give dispatchers a real-time view of the people, vehicles, equipment and jobs required to run the day — then create jobs, assign crews, move schedules and respond to changes from one connected dispatch centre.',
+      'Give dispatchers a real-time view of the people, vehicles, equipment and jobs required to run the day — then create jobs, assign crews, move schedules and respond to changes from one connected dispatch center.',
     screenshot: liveDispatchNote,
     screenshotAlt:
       'LaneOps Dispatch Note screen showing active crews, pending acceptance, and job assignments for Riverside Metro',
@@ -69,7 +69,7 @@ export const platformCategories: PlatformCategoryDetail[] = [
         bullets: [
           'Active Jobs — every job in progress, at a glance',
           'Available Workers — who is free right now, region by region',
-          'TCPs & LCTs — certified traffic control and lane closure personnel, ready to assign',
+          'TCPs (Traffic Control Persons / flaggers) & LCTs — certified traffic control and lane closure personnel, ready to assign',
           'Supervisors — who is covering which sites today',
           'Available Vehicles — which trucks and units are free to dispatch',
           'Equipment Availability — signs, cones, and devices ready to go out',
@@ -94,7 +94,7 @@ export const platformCategories: PlatformCategoryDetail[] = [
       body: 'Scheduling a traffic-control worker requires more than finding someone who isn’t working. LaneOps can help prevent assignments when requirements aren’t met — putting the right worker on the right job with the right qualifications.',
       items: [
         'TCP Certification Valid',
-        "Driver's Licence Valid",
+        "Driver's License Valid",
         'Required Orientation Complete',
         'Employee Available',
         'Vehicle Available',
@@ -122,9 +122,9 @@ export const platformCategories: PlatformCategoryDetail[] = [
         heading: 'A Complete Employee Profile',
         bullets: [
           'Employee Profiles — contact information, emergency contacts, position, region, wage information, hire date, status and employment information',
-          'Certifications — Traffic Control Certification, driver’s licences, First Aid, safety certificates and required orientations',
+          'Certifications — Traffic Control Certification, driver’s licenses, First Aid, safety certificates and required orientations',
           'Availability — employees submit availability, vacation requests and time-off requests digitally',
-          'Employee Documents — hiring packages, licences, certifications, signed documents, contracts and orientations',
+          'Employee Documents — hiring packages, licenses, certifications, signed documents, contracts and orientations',
           'Job History — completed jobs, accepted work, timesheets, incidents and employment history',
         ],
       },
@@ -142,7 +142,7 @@ export const platformCategories: PlatformCategoryDetail[] = [
         heading: "Don't Find Out a Certification Expired at Dispatch",
         body: 'LaneOps monitors employee certifications and important documents before they become an operational problem.',
         bullets: [
-          'Traffic Control Certification, Driver’s Licence, First Aid, Safety Certificates',
+          'Traffic Control Certification, Driver’s License, First Aid, Safety Certificates',
           'Company Orientations, Customer Orientations, Site Orientations',
           'Expiry notifications, with workers missing a required credential prevented from being scheduled where it’s needed',
         ],
@@ -167,7 +167,7 @@ export const platformCategories: PlatformCategoryDetail[] = [
       {
         heading: 'Every Vehicle, Fully Documented',
         bullets: [
-          'Vehicle Profiles — VIN, licence plate, unit number, make, model, year, driver, region, notes and photos',
+          'Vehicle Profiles — VIN, license plate, unit number, make, model, year, driver, region, notes and photos',
           'Vehicle Status — see active, inactive and repair vehicles at a glance',
           'Vehicle History — repairs, maintenance, driver changes, inventory movements, transfers, photos and notes',
           'Vehicle Inspections — digital pre-trip, post-trip and defect reporting',
@@ -250,6 +250,18 @@ export const platformCategories: PlatformCategoryDetail[] = [
         ],
       },
     ],
+    checklist: {
+      title: 'Built to Meet Applicable Compliance Standards',
+      body: 'LaneOps keeps the documentation your operation needs to meet applicable state, provincial, and federal traffic-control standards — organized, searchable, and ready for an audit.',
+      items: [
+        'Traffic Control Plans Aligned to Jurisdictional Standards',
+        'Certification Tracking for State- and Provincial-Required Credentials',
+        'Digital Field-Level Risk Assessments, Timestamped and Attributable',
+        'Incident and Near-Miss Documentation Ready for Review',
+        'Configurable Document Retention for Compliance Recordkeeping',
+        'Audit-Ready Export of Safety and Certification Records',
+      ],
+    },
     ctaTitle: 'Bring Safety Documentation Into One System',
     ctaBody:
       'Book a demo and see how LaneOps keeps FLRAs, inspections, and incident reports searchable.',
@@ -298,7 +310,7 @@ export const platformCategories: PlatformCategoryDetail[] = [
         heading: 'Less Manual Billing. Less Missed Revenue.',
         body: 'Billing can include:',
         bullets: [
-          'Labour',
+          'Labor',
           'Overtime',
           'Equipment',
           'Vehicle Rentals',
@@ -313,7 +325,7 @@ export const platformCategories: PlatformCategoryDetail[] = [
         bullets: [
           'Employee Wage Rates',
           'Overtime and Shift Premiums',
-          'Statutory Holidays',
+          'Paid Holidays',
           'Deductions and Bonuses',
           'Multi-Rate Work',
         ],

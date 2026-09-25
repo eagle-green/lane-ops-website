@@ -13,7 +13,7 @@ export const allFeatureCategories: FeatureCategory[] = [
     id: 'job-management',
     title: 'Job Management',
     items: [
-      'Create jobs, assign crews, and move schedules from one dispatch centre',
+      'Create jobs, assign crews, and move schedules from one dispatch center',
       'Multi-day & multi-location jobs',
       'Recurring jobs without rebuilding schedules',
     ],
@@ -35,7 +35,7 @@ export const allFeatureCategories: FeatureCategory[] = [
     items: [
       'Complete employee profiles — contact, position, region, wage, hire date, status',
       'Digital availability, vacation, and time-off submissions',
-      'Employee documents — hiring packages, licences, contracts, orientations',
+      'Employee documents — hiring packages, licenses, contracts, orientations',
       'Job history — completed jobs, timesheets, incidents, employment history',
     ],
   },
@@ -60,7 +60,7 @@ export const allFeatureCategories: FeatureCategory[] = [
     id: 'employee-certifications',
     title: 'Employee Certifications',
     items: [
-      'Track TCP certification, driver’s licence, First Aid, and safety certificates',
+      'Track TCP certification, driver’s license, First Aid, and safety certificates',
       'Company, customer, and site orientations',
       'Expiry notifications before a certification becomes an operational problem',
     ],
@@ -163,7 +163,7 @@ export const allFeatureCategories: FeatureCategory[] = [
     id: 'scheduling-intelligence',
     title: 'Scheduling Intelligence',
     items: [
-      'Checks certification validity, licence validity, and orientation completion before scheduling',
+      'Checks certification validity, license validity, and orientation completion before scheduling',
       'Flags vehicle/equipment availability and time-off conflicts',
     ],
   },
@@ -176,7 +176,7 @@ export const allFeatureCategories: FeatureCategory[] = [
     id: 'document-management',
     title: 'Document Management',
     items: [
-      'Store licences, certifications, contracts, and orientation records',
+      'Store licenses, certifications, contracts, and orientation records',
       'Safety documentation storage',
     ],
   },

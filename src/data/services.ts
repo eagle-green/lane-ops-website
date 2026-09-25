@@ -48,7 +48,8 @@ export const homeFeatures: FeatureItem[] = [
   {
     id: 'safety-reporting',
     title: 'Safety & Compliance',
-    description: 'FLRAs, traffic management plans and incident reports, tied to the job record.',
+    description:
+      'Field-level risk assessments (FLRAs), traffic management plans and incident reports, tied to the job record.',
     icon: 'shield',
     screenshot: safetyComplianceThumb,
   },

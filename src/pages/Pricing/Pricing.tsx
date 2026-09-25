@@ -21,7 +21,7 @@ const heroCards = [
   {
     id: 'compliance',
     title: 'Compliance Tools',
-    description: 'FLRAs, traffic plans, and incident reports in one place.',
+    description: 'Field-level risk assessments (FLRAs), traffic plans, and incident reports in one place.',
   },
 ]
 

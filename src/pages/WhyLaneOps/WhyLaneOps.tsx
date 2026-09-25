@@ -58,6 +58,7 @@ function WhyLaneOps() {
           body="Book a demo and see what your traffic control operation looks like when everything is connected."
           primaryLabel="Book a Demo"
           primaryTo={bookDemoPath}
+          footnote="Founded in British Columbia, Canada — built for traffic control operations across North America."
         />
       </Reveal>
     </>

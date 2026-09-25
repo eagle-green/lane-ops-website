@@ -14,6 +14,7 @@ const AllFeatures = lazy(() => import('@/pages/AllFeatures'))
 const Contact = lazy(() => import('@/pages/Contact'))
 const Pricing = lazy(() => import('@/pages/Pricing'))
 const SavingsCalculatorPage = lazy(() => import('@/pages/SavingsCalculatorPage'))
+const FAQ = lazy(() => import('@/pages/FAQ'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/savings-calculator" element={<SavingsCalculatorPage />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

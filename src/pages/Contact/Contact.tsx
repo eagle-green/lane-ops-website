@@ -24,16 +24,23 @@ function Contact() {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [region, setRegion] = useState('')
+  const [postalCode, setPostalCode] = useState('')
   const [message, setMessage] = useState('')
 
   const nameId = useId()
   const emailId = useId()
+  const regionId = useId()
+  const postalCodeId = useId()
   const messageId = useId()
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const subject = encodeURIComponent(`Website inquiry from ${name || 'a visitor'}`)
-    const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`)
+    const locationLine = [region, postalCode].filter(Boolean).join(', ')
+    const body = encodeURIComponent(
+      `${message}\n\n— ${name}\n${email}${locationLine ? `\n${locationLine}` : ''}`,
+    )
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`
   }
 
@@ -96,6 +103,36 @@ function Contact() {
                   required
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
+                />
+              </div>
+
+              <div className={styles.field}>
+                <label className={styles.label} htmlFor={regionId}>
+                  State / Province <span className={styles.optional}>(optional)</span>
+                </label>
+                <input
+                  id={regionId}
+                  className={styles.input}
+                  type="text"
+                  name="region"
+                  autoComplete="address-level1"
+                  value={region}
+                  onChange={(event) => setRegion(event.target.value)}
+                />
+              </div>
+
+              <div className={styles.field}>
+                <label className={styles.label} htmlFor={postalCodeId}>
+                  ZIP / Postal Code <span className={styles.optional}>(optional)</span>
+                </label>
+                <input
+                  id={postalCodeId}
+                  className={styles.input}
+                  type="text"
+                  name="postalCode"
+                  autoComplete="postal-code"
+                  value={postalCode}
+                  onChange={(event) => setPostalCode(event.target.value)}
                 />
               </div>
 

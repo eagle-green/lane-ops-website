@@ -67,12 +67,12 @@ function Home() {
   return (
     <>
       <HomeHero
-        eyebrow="Built for Canadian Traffic Control"
+        eyebrow="Built for Traffic Control Operations"
         headline="Traffic Control Operations."
         headlineAccent="One Connected Platform."
         subheadline="LaneOps connects your dispatchers, field crews, supervisors, vehicles, equipment, safety, timecards, payroll and customer billing in one platform built around traffic-control operations."
         tagline="No disconnected systems. No duplicate entry. No forgotten equipment. No missed billing."
-        footnote="Built in BC. Built for Traffic Control."
+        footnote="Purpose-Built for Traffic Control."
         actions={[
           { label: 'Book a Demo', to: bookDemoPath, variant: 'primary' },
           { label: 'See How It Works', to: '/how-it-works', variant: 'outline' },
@@ -122,7 +122,7 @@ function Home() {
           body="Scheduling a traffic control worker takes more than finding someone who isn't working. LaneOps blocks the assignment when a requirement isn't met — the right worker, on the right job, with the right qualifications."
           checklist={[
             'TCP Certification Valid',
-            "Driver's Licence Valid",
+            "Driver's License Valid",
             'Required Orientation Complete',
             'Employee Available',
             'Vehicle Available',
@@ -197,7 +197,7 @@ function Home() {
           primaryTo={bookDemoPath}
           secondaryLabel="Talk to us first"
           secondaryTo="/contact"
-          footnote="Built in BC. Built for Traffic Control."
+          footnote="Purpose-Built for Traffic Control."
         />
       </Reveal>
     </>
