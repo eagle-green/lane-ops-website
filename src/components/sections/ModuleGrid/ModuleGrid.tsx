@@ -19,6 +19,7 @@ interface ModuleGridGridProps {
   modules: ModuleItem[]
   screenshotSrc?: string
   screenshotAlt?: string
+  screenshotChrome?: boolean
   background?: 'white' | 'muted'
 }
 
@@ -28,7 +29,7 @@ function ModuleGrid(props: ModuleGridProps) {
   const background = props.background ?? 'white'
 
   if (props.layout === 'grid') {
-    const { headline, body, modules, screenshotSrc, screenshotAlt } = props
+    const { headline, body, modules, screenshotSrc, screenshotAlt, screenshotChrome } = props
     return (
       <Section background={background}>
         <div className={styles.gridHeader}>
@@ -40,7 +41,7 @@ function ModuleGrid(props: ModuleGridProps) {
 
         {screenshotSrc && screenshotAlt && (
           <div className={styles.visual}>
-            <ProductScreenshot src={screenshotSrc} alt={screenshotAlt} />
+            <ProductScreenshot src={screenshotSrc} alt={screenshotAlt} chrome={screenshotChrome} />
           </div>
         )}
 

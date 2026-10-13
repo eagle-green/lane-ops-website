@@ -7,8 +7,7 @@ import Benefits from '@/components/sections/Benefits'
 import CallToAction from '@/components/sections/CallToAction'
 import Hero from '@/components/sections/Hero'
 import ModuleGrid from '@/components/sections/ModuleGrid'
-import featuresHero from '@/assets/images/features-hero.svg'
-import systemOverview from '@/assets/images/system-overview.svg'
+import homeDashboard from '@/assets/images/home-dashboard.png'
 import { featuresResults } from '@/data/benefits'
 import { systemOverviewModules } from '@/data/modules'
 import { bookDemoPath } from '@/data/navigation'
@@ -38,8 +37,9 @@ function Features() {
           { label: 'Book a Demo', to: bookDemoPath, variant: 'primary' },
           { label: 'See All Features', to: '/features/all', variant: 'secondary' },
         ]}
-        screenshotSrc={featuresHero}
-        screenshotAlt="LaneOps dispatch and scheduling dashboard overview"
+        screenshotSrc={homeDashboard}
+        screenshotAlt="LaneOps Board View showing job cards with crew assignments and worker status, on desktop and mobile"
+        screenshotChrome={false}
       />
 
       <Reveal>
@@ -76,8 +76,9 @@ function Features() {
           headline="One System. Total Control."
           body="Every module below shares the same job, crew, and asset records, so nothing has to be re-entered twice."
           modules={systemOverviewModules}
-          screenshotSrc={systemOverview}
-          screenshotAlt="System overview showing jobs, dispatch, vehicles, inventory, employees, clients, reports, and payroll modules"
+          screenshotSrc={homeDashboard}
+          screenshotAlt="LaneOps Board View showing job cards with crew assignments and worker status, on desktop and mobile"
+          screenshotChrome={false}
         />
       </Reveal>
 
